@@ -1,0 +1,166 @@
+/*INDEX */
+
+body {
+    background: url(/images/bg.png);
+    background-size: cover  ;
+    font-family: 'Georgia', serif;
+    color: #ffffff;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    user-select: none;  
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-container {
+    flex: 1; /* Занимает оставшуюся высоту, чтобы футер всегда был внизу */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирует содержимое по вертикали */
+    text-align: center;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.lead {
+    color: #ffffff;
+}
+
+/* Кнопки с плавной заливкой */
+.btn {
+    display: block;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.4s ease; /* Плавный переход цвета текста */
+    z-index: 1;
+    text-decoration: none; /* Убирает подчеркивание ссылок */
+    width: 300px;
+
+}
+
+/* Псевдоэлемент для анимации заливки */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: width 0.4s ease-out; /* Плавная заливка */
+    z-index: -1;
+}
+
+/* Эффекты при наведении */
+.btn:hover::before {
+    width: 100%; /* Заполнение ширины */
+}
+
+.btn:hover {
+    color: #000000; /* Цвет текста меняется на белый при наведении */
+}
+
+/* Белая кнопка */
+.btn-white {
+    color: #be0000; /* Цвет текста */
+    border: 2px solid #be0000; /* Цвет границы */
+}
+
+.btn-white::before {
+    background-color: #be0000; /* Цвет заливки */
+}
+
+/* Зеленая кнопка */
+.btn-green {
+    color: #be0000; /* Цвет текста */
+    border: 2px solid #be0000; /* Цвет границы */
+}
+
+.btn-green::before {
+    background-color: #be0000; /* Цвет заливки */
+}
+
+/* Красная кнопка */
+.btn-red {
+    color: #be0000; /* Цвет текста */
+    border: 2px solid #be0000; /* Цвет границы */
+}
+
+.btn-red::before {
+    background-color: #be0000; /* Цвет заливки */
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+
+
+
+
+
+
+/*SET POINT*/
+
+.goal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Выравнивание карточек по ширине */
+    margin: 20px 0; /* Отступ между заголовком и карточками */
+}
+
+.goal-card {
+    background-color: #222; /* Цвет фона карточки */
+    border: 2px solid #be0000; /* Цвет границы карточки */
+    border-radius: 10px;
+    width: 250px; /* Ширина карточки */
+    margin: 10px; /* Отступ между карточками */
+    padding: 10px; /* Внутренние отступы */
+    text-align: center; /* Центрирование текста внутри карточки */
+}
+
+.goal-image {
+    width: 100%; /* Ширина изображения */
+    border-radius: 10px; /* Закругление углов изображения */
+}
+
+.goal-inputs {
+    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание графов */
+    margin-top: 10px; /* Отступ между изображением и графами */
+}
+
+input[type="number"] {
+    margin: 5px 0; /* Отступ между полями ввода */
+    padding: 10px;
+    border: 2px solid #be0000; /* Цвет границы */
+    border-radius: 5px;
+    background-color: #333; /* Цвет фона полей */
+    color: #ffffff; /* Цвет текста */
+}
+

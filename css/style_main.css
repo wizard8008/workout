@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Вертикальная организация */
+    height: 100%;
+    font-family: 'Georgia', serif;
+    background-color: #313131;
+    color: #fff;
+}
+
+.footer {
+    margin-top: auto; /* Это прижмет футер к низу */
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+.list {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку при недостатке места */
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.case {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    transition: background 0.3s;
+    cursor: pointer;
+    
+}
+
+.case:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.case img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.case h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+/* Новые стили для заголовков секций */
+.section-title {
+    display: inline-block; /* Для контроля размеров */
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px; /* Закругление */
+    border: 2px solid rgb(0, 0, 0, 1);
+    box-sizing: border-box; /* Учитывает отступы внутри */
+}
+
+
+
+.section-title .lowercase {
+    text-transform: lowercase; /* Переопределяет текст внутри span на строчный */
+}
+
+h3{
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.goal-inputs {
+    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание полей */
+    margin-top: 10px; /* Отступ между описанием и полями ввода */
+}
+
+input[type="number"] {
+    margin: 5px 0; /* Отступ между полями ввода */
+    padding: 10px; /* Внутренние отступы */
+    border: none; /* Убираем границу */
+    border-radius: 25px; /* Закругление углов */
+    background-color: rgb(0, 0, 0); /* Полупрозрачный фон */
+    color: #ffffff; /* Цвет текста */
+    transition: background-color 0.3s ease; /* Плавный переход фона */
+}
+
+input[type="number"]:focus {
+    background-color: rgb(0, 0, 0); /* Изменяем фон при фокусе */
+    outline: none; /* Убираем обводку */
+}
+
+
+
+/*TEST*/
+
+.header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0, 1);
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    .header nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header nav ul li {
+        margin: 0 15px;
+    }
+
+    .header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2em;
+        transition: color 0.3s;
+    }
+
+    .header nav ul li a:hover {
+        color: #be0000;
+    }
+
+    .exercise-card {
+        display: inline-block;
+        width: 230px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s, background 0.3s;
+        text-align: center; /* Центрирование содержимого карточки */
+    }
+    
+    .sets-input, .reps-input  {
+        width: 100%; /* Ширина поля ввода */
+        margin: 10px auto; /* Центрирование поля ввода */
+        padding: 5px; /* Отступы внутри поля */
+        border: 1px solid #ccc; /* Граница поля */
+        border-radius: 5px; /* Скругление углов */
+    }
+    
+
+    /*TIMER*/
+
+
+    #timerContainer, #totalTimeContainer {
+        text-align: center;
+        margin-top: 40px;
+        border: 2px solid #ffffff; /* Толщина (2px), стиль (сплошная), цвет (чёрный) */
+        border-radius: 30px; /* Скруглённые углы (опционально) */
+        padding: 10px; /* Внутренний отступ для создания пространства между содержимым и рамкой */
+        width: 31%;
+    }
+    
+    #timerDisplay {
+        font-size: 2em;
+        color: #ffffff;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;  /* Элементы располагаются вертикально */
+        align-items: center;  /* Центрирует элементы по горизонтали */
+    }
+    
+    /*BUTTON*/
+
+    .btn {
+        margin: 15px;
+        padding: 10px 20px;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: color 0.4s ease; /* Плавный переход цвета текста */
+        z-index: 1;
+        text-decoration: none; /* Убирает подчеркивание ссылок */
+        color: #be0000; /* Цвет текста */
+        border: 2px solid #be0000; /* Цвет границы */
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Псевдоэлемент для анимации заливки */
+    .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        transition: width 0.4s ease-out; /* Плавная заливка */
+        z-index: -1;
+        background-color: #be0000; /* Цвет заливки */
+
+    }
+
+    /* Эффекты при наведении */
+    .btn:hover::before {
+        width: 100%; /* Заполнение ширины */
+    }
+
+    .btn:hover {
+        color: #000000; /* Цвет текста меняется на белый при наведении */
+    }
+    
+
+    .custom-hr {
+        border: none;
+        height: 2px;
+        background-color: #1c3b53;
+      }
+
+      .workout-section, .all-exercises {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .workout-section {
+        border: 2px dashed #be0000;
+    }
+
+    .exercise-card {
+        display: inline-block;
+        width: 230px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s, background 0.3s;
+    }
+
+    .exercise-card:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .exercise-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .exercise-card h3 {
+        margin-top: 10px;
+        color: #fff;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .message-container {
+        margin: 20px 0;
+        text-align: center; /* или другое расположение */
+    }
+    
+    .success-message {
+        color: green;
+        background-color: #e6ffe6;
+        padding: 10px;
+        border: 1px solid #5cb85c;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    .case {
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        transition: border-color 0.3s;
+    }
+    
+    .case.achieved {
+        border: 3px solid rgb(163, 255, 163);
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+    }   
+
+    /* CHECK BOX STYLE */
+
+    /* Изменение отступа и цвета для чекбоксов */
+.exercise-card .done-checkbox {
+    margin: 10px; /* Устанавливаем отступы вокруг чекбокса */
+    accent-color: green; /* Меняем цвет чекбокса на зеленый (для современных браузеров) */
+}
+
+
+
+
+
+
+
+/* Стиль для summary (заголовков Workout #1, #2...) */
+#workout-history summary {
+    font-size: 1.2em; /* Увеличенный размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    cursor: pointer; /* Изменение курсора при наведении */
+    color: peachpuff; /* Желтый цвет */
+    margin-bottom: 5px;
+}
+
+/* Стиль для Total Time, Completed и других текстов */
+#workout-history p {
+    margin: 5px 0; /* Отступы сверху и снизу */
+    font-size: 1em; /* Размер шрифта */
+    color: peachpuff; /* Серый цвет текста */
+}
+
+/* Стилизация заголовков статистики внутри деталей */
+#workout-history strong {
+    color: #be0000; /* Оранжевый цвет для ключевых заголовков */
+    font-weight: bold;
+}
+
+/* Дополнительное оформление для Details */
+#workout-history details {
+    font-weight: bold;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 10px;  
+    margin: 10px 0; /* Отступы между блоками */
+    background-color: #040012; /* Темно-серый фон */
+}
+
+
+    
